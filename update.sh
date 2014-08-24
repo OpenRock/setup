@@ -170,3 +170,36 @@ cd ~/work/opendj
 git checkout master
 git svn rebase
 git push
+git checkout 3_0_0_OPENAM
+git svn rebase 3.0.0-OPENAM
+git push
+git checkout 3_0_0_Xpress
+git svn rebase 3.0.0-Xpress
+git push
+git checkout b1_0_1
+git svn rebase b1.0.1
+git push
+git checkout b1_2
+git svn rebase b1.2
+git push
+git checkout b2_0
+git svn rebase b2.0
+git push
+git checkout b2_2
+git svn rebase b2.2
+git push
+git checkout b2_4
+git svn rebase b2.4
+git push
+git checkout b2_6_sdk
+git svn rebase b2.6-sdk
+git push
+git checkout data_providers
+git svn rebase data-providers
+git push
+git checkout opendj3_server_dev
+git svn rebase opendj3-server-dev
+git push
+git checkout r1_0
+git svn rebase r1.0
+git push
