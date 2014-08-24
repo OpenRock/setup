@@ -1,0 +1,5 @@
+$ git clone [github url]
+$ cd repo
+$ git svn init [svn url]
+$ git update-ref refs/remotes/git-svn refs/remotes/origin/master
+$ git svn rebase
