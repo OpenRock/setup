@@ -3,7 +3,9 @@
 echo "===========> OpenAM"
 cd ~/work/openam
 git checkout master
+git pull
 git svn rebase
+git rebase origin/master
 git push
 git checkout AME_2372
 git svn rebase AME-2372
