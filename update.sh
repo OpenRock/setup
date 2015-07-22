@@ -7,41 +7,8 @@ git pull
 git svn rebase
 git rebase origin/master
 git push
-git checkout AME_2372
-git svn rebase AME-2372
-git push
-git checkout AME_2629
-git svn rebase AME-2629
-git push
-git checkout AME_3268_application_endpoint
-git svn rebase AME-3268-application-endpoint
-git push
-git checkout AME_3423
-git svn rebase AME-3423
-git push
-git checkout AME_3706
-git svn rebase AME-3706
-git push
-git checkout AME_3719
-git svn rebase AME-3719
-git push
-git checkout AME_4204
-git svn rebase AME-4204
-git push
-git checkout AME_4254
-git svn rebase AME-4254
-git push
 git checkout OAUTH2_MAVEN
 git svn rebase OAuth2_Maven
-git push
-git checkout OPENAM_3442_CTS_TokenType
-git svn rebase OPENAM-3442-CTS-TokenType
-git push
-git checkout alin_AME_341
-git svn rebase alin_AME-341
-git push
-git checkout AME4272
-git svn rebase ame4272
 git push
 git checkout extensions_cyber_ee
 git svn rebase extensions-cyber_ee
@@ -61,18 +28,6 @@ git push
 git checkout OAUTH2_BRANCH
 git svn rebase oauth2-branch
 git push
-git checkout OIDC_AUTHN
-git svn rebase oidc_authn
-git push
-git checkout openam_4035
-git svn rebase openam-4035
-git push
-git checkout openam_6425
-git svn rebase openam-6425
-git push
-git checkout openam_OPENAM_500
-git svn rebase openam-OPENAM-500
-git push
 git checkout openam_10_1_0_alin
 git svn rebase openam_10.1.0_alin
 git push
@@ -91,36 +46,11 @@ git push
 git checkout OPENID_CONNECT_IMPLEMENTATION
 git svn rebase openid_connect_implementation
 git push
-git checkout REST_STS_VIEW_BEAN
-git svn rebase rest_sts_view_bean
-git push
-git checkout SOAP_STS_TGS
-git svn rebase soap_sts_tgs
-git push
-git checkout STS_RESTART_PERSISTENCE
-git svn rebase sts_restart_persistence
-git push
-git checkout STS_SERVICE_LISTENERS
-git svn rebase sts_service_listeners
-git push
-git checkout STS_X509
-git svn rebase sts_x509
-git push
 
 echo "===========> OpenIG"
 cd ~/work/openig
-git checkout master
-git svn rebase
-git push
-git checkout 2_1_1
-git svn rebase 2.1.1
-git push
-git checkout 3_0
-git svn rebase 3.0
-git push
-git checkout HTTPFRAMEWORK
-git svn rebase http-framework
-git push
+git fetch -q --all -p
+git push --all -f mirror
 
 echo "===========> OpenIDM"
 cd ~/work/openidm
@@ -154,17 +84,23 @@ git push
 git checkout ICF1_4_integration_2
 git svn rebase ICF1.4-integration-2
 git push
-git checkout OPENIDM_2063
-git svn rebase OPENIDM-2063
-git push
-git checkout OPENIDM_2444
-git svn rebase OPENIDM-2444
-git push
-git checkout OPENIDM_2507
-git svn rebase OPENIDM-2507
-git push
 git checkout CLI_HELP_CLEANUP
 git svn rebase cli_help_cleanup
+git push
+git checkout bootstrapui
+git svn rebase bootstrapui
+git push
+git checkout upgrade
+git svn rebase upgrade
+git push
+git checkout upgrade_40
+git svn rebase upgrade_40
+git push
+git checkout openidm_3_1_paxweb_4_x
+git svn rebase openidm_3_1_paxweb_4_x
+git push
+git checkout openidm_commons_audit
+git svn rebase openidm-commons-audit
 git push
 
 echo "===========> OpenDJ"
@@ -199,8 +135,11 @@ git push
 git checkout data_providers
 git svn rebase data-providers
 git push
-git checkout opendj3_server_dev
-git svn rebase opendj3-server-dev
+git checkout opendj_commons_audit
+git svn rebase opendj_commons_audit
+git push
+git checkout opendj_commons_user_schema
+git svn rebase opendj_commons_user_schema
 git push
 git checkout r1_0
 git svn rebase r1.0
