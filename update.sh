@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# First setup GIT mirror with
+# git clone --mirror https://stash.forgerock.org/scm/openidm/openidm.git
+# cd openidm.git
+# git remote add mirror git@github.com:OpenRock/OpenIDM.git
+# git push --all -f mirror
+#
+# see https://help.github.com/articles/duplicating-a-repository/ for reference
+# IMPORTANT: setup ~/.netrc with content like as follows:
+# machine stash.forgerock.org login <REAL USERNAME> password <REALM PASSWORD>
+
 echo "===========> OpenAM"
 cd ~/work/openam
 git checkout master
@@ -54,93 +64,10 @@ git push --all -f mirror
 
 echo "===========> OpenIDM"
 cd ~/work/openidm
-git checkout master
-git svn rebase
-git push
-git checkout 2_0_x
-git svn rebase 2.0.x
-git push
-git checkout 2_0_x_EA
-git svn rebase 2.0.x-EA
-git push
-git checkout 2_1
-git svn rebase 2.1
-git push
-git checkout 2_1_x
-git svn rebase 2.1.x
-git push
-git checkout 2_2_x_prototype_CREST
-git svn rebase 2.2.x-prototype-CREST
-git push
-git checkout 3_0_0_RC
-git svn rebase 3.0.0-RC
-git push
-git checkout 3_1_earlyprototype
-git svn rebase 3.1-earlyprototype
-git push
-git checkout ICF1_4_integration
-git svn rebase ICF1.4-integration
-git push
-git checkout ICF1_4_integration_2
-git svn rebase ICF1.4-integration-2
-git push
-git checkout CLI_HELP_CLEANUP
-git svn rebase cli_help_cleanup
-git push
-git checkout bootstrapui
-git svn rebase bootstrapui
-git push
-git checkout upgrade
-git svn rebase upgrade
-git push
-git checkout upgrade_40
-git svn rebase upgrade_40
-git push
-git checkout openidm_3_1_paxweb_4_x
-git svn rebase openidm_3_1_paxweb_4_x
-git push
-git checkout openidm_commons_audit
-git svn rebase openidm-commons-audit
-git push
+git fetch -q --all -p
+git push --all -f mirror
 
 echo "===========> OpenDJ"
 cd ~/work/opendj
-git checkout master
-git svn rebase
-git push
-git checkout 3_0_0_OPENAM
-git svn rebase 3.0.0-OPENAM
-git push
-git checkout 3_0_0_Xpress
-git svn rebase 3.0.0-Xpress
-git push
-git checkout b1_0_1
-git svn rebase b1.0.1
-git push
-git checkout b1_2
-git svn rebase b1.2
-git push
-git checkout b2_0
-git svn rebase b2.0
-git push
-git checkout b2_2
-git svn rebase b2.2
-git push
-git checkout b2_4
-git svn rebase b2.4
-git push
-git checkout b2_6_sdk
-git svn rebase b2.6-sdk
-git push
-git checkout data_providers
-git svn rebase data-providers
-git push
-git checkout opendj_commons_audit
-git svn rebase opendj_commons_audit
-git push
-git checkout opendj_commons_user_schema
-git svn rebase opendj_commons_user_schema
-git push
-git checkout r1_0
-git svn rebase r1.0
-git push
+git fetch -q --all -p
+git push --all -f mirror
