@@ -61,13 +61,27 @@ echo "===========> OpenIG"
 cd ~/work/openig
 git fetch -q --all -p
 git push --all -f mirror
+git push --tags -f mirror
 
 echo "===========> OpenIDM"
 cd ~/work/openidm
 git fetch -q --all -p
 git push --all -f mirror
+git push --tags -f mirror
 
 echo "===========> OpenDJ"
 cd ~/work/opendj
 git fetch -q --all -p
 git push --all -f mirror
+git push --tags -f mirror
+
+echo "===========> OpenICF"
+cd ~/work/openicf-java-framework
+git fetch -q --all -p
+git push --all -f mirror
+git push --tags -f mirror
+
+cd ~/work/openicf-dotnet-framework
+git fetch -q --all -p
+git push --all -f mirror
+git push --tags -f mirror
