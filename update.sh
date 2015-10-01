@@ -76,12 +76,9 @@ git push --all -f mirror
 git push --tags -f mirror
 
 echo "===========> OpenICF"
-cd ~/work/openicf-java-framework
-git fetch -q --all -p
-git push --all -f mirror
-git push --tags -f mirror
-
-cd ~/work/openicf-dotnet-framework
-git fetch -q --all -p
-git push --all -f mirror
-git push --tags -f mirror
+for d in `ls -d ~/work/openicf-*`; do
+	cd $d
+	git fetch -q --all -p
+	git push --all -f mirror
+	git push --tags -f mirror
+done
