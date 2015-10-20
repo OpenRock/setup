@@ -6,11 +6,11 @@ git fetch -q --all -p
 git push --all -f mirror
 git push --tags -f mirror
 
-#cd ~/work/openam.update
-#git checkout master
-#git pull
-#git am *.patch
-#git push
+cd ~/work/openam.update
+git checkout master
+git pull
+git am *.patch
+git push
 
 echo "===========> OpenIG"
 cd ~/work/openig
@@ -24,11 +24,11 @@ git fetch -q --all -p
 git push --all -f mirror
 git push --tags -f mirror
 
-#cd ~/work/openidm.update
-#git checkout master
-#git pull
-#git am *.patch
-#git push
+cd ~/work/openidm.update
+git checkout master
+git pull
+git am *.patch
+git push
 
 echo "===========> OpenDJ"
 cd ~/work/opendj
@@ -38,6 +38,7 @@ git push --tags -f mirror
 
 echo "===========> OpenICF"
 for d in `ls -d ~/work/openicf-*`; do
+	echo basename $d
 	cd $d
 	git fetch -q --all -p
 	git push --all -f mirror
