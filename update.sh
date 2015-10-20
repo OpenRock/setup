@@ -6,11 +6,11 @@ git fetch -q --all -p
 git push --all -f mirror
 git push --tags -f mirror
 
-cd ~/work/openam.update
-git checkout master
-git pull
-git am *.patch
-git push
+#cd ~/work/openam.update
+#git checkout master
+#git pull
+#git am *.patch
+#git push
 
 echo "===========> OpenIG"
 cd ~/work/openig
@@ -23,6 +23,12 @@ cd ~/work/openidm
 git fetch -q --all -p
 git push --all -f mirror
 git push --tags -f mirror
+
+#cd ~/work/openidm.update
+#git checkout master
+#git pull
+#git am *.patch
+#git push
 
 echo "===========> OpenDJ"
 cd ~/work/opendj
